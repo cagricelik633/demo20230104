@@ -30,7 +30,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
       
-    - name: Add coverage to PRR
+    - name: Add coverage to PRRR
       id: jacoco
       uses: madrapps/jacoco-report@v1.3
       with:
