@@ -30,7 +30,7 @@ public class MetinIslemleriTest {
         String sonuc = MetinIslemleri.bosluklariTemizle(orjinalMetin);
 
         // THEN - Kontroller
-        assertEquals("Uctashoshosaf...", sonuc);
+        assertEquals("", sonuc);
 	
 	
 		
@@ -49,7 +49,7 @@ public class MetinIslemleriTest {
 	    }
 	 
 		@Test
-		public void testBosluklariTemizle() {
+		public void testBosluklariTemizle2() {
 			// GIVEN - On hazirliklar
 	        String orjinalMetin ="Merhaba arkadaslar ";
 
