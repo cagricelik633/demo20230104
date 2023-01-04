@@ -9,7 +9,7 @@ public class MetinIslemleriTest {
 	@Test
 	public void testBosluklariTemizle() {
 		// GIVEN - On hazirliklar
-        String orjinalMetin = null;
+        String orjinalMetin ="Uc tas hos     ho  saf  . . . ";
 
         // WHEN - Asil testi gerceklestir
         String sonuc = MetinIslemleri.bosluklariTemizle(orjinalMetin);
@@ -20,5 +20,47 @@ public class MetinIslemleriTest {
 	
 		
 	}
+	
+	@Test
+	public void testBosluklariTemizleNull() {
+		// GIVEN - On hazirliklar
+        String orjinalMetin =null;
+
+        // WHEN - Asil testi gerceklestir
+        String sonuc = MetinIslemleri.bosluklariTemizle(orjinalMetin);
+
+        // THEN - Kontroller
+        assertEquals("Uctashoshosaf...", sonuc);
+	
+	
+		
+	}
+	
+	 @Test
+	    public void testBosluklariTemizleNew() {
+	        // GIVEN - On hazirliklar
+	        MetinIslemleri obje;
+
+	        // WHEN - Asil testi gerceklestir
+	        obje = new MetinIslemleri();
+
+	        // THEN - Kontroller
+	        assertNotNull(obje);
+	    }
+	 
+		@Test
+		public void testBosluklariTemizle() {
+			// GIVEN - On hazirliklar
+	        String orjinalMetin ="Merhaba arkadaslar ";
+
+	        // WHEN - Asil testi gerceklestir
+	        String sonuc = MetinIslemleri.bosluklariTemizle(orjinalMetin);
+
+	        // THEN - Kontroller
+	        assertEquals("Merhabaarkadaslar", sonuc);
+		
+		
+			
+		}
 
 }
